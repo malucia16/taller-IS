@@ -18,4 +18,6 @@ use App\Http\Controllers\OrdersController;
 Route::middleware(['filter'])->group(function () {
     Route::get('/orders', [OrdersController::class, 'index']);
     Route::post('/orders', [OrdersController::class, 'store']);
+    Route::put('/orders/{id}', [OrdersController::class, 'update']);
+    Route::delete('/orders/{id}', [OrdersController::class, 'destroy']);
 });
